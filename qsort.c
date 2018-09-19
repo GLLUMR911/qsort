@@ -94,6 +94,8 @@ void Qsort(void *a, int n, int size, int(*cmp)(const void *, const void *))
 
 	Qsort(a, i, size, cmp);
 	Qsort(a + (i + 1) * size, n - i - 1, size, cmp);
+	
+	free(tmp);
 }
 
 int cmp_stu(const void *a, const void *b)
